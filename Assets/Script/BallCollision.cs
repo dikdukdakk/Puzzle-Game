@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class BallCollision : MonoBehaviour
 {
-    public void OnCollisionEnter(Collision col)
+    public void OnCollisionEnter(Collision ball)
     {
-        if (col.gameObject.name != "Pass")
+        if (ball.gameObject.name != "getPoint")
             return; //Active GameOverUI
 
-        Debug.Log("Good Job!!");
+        GameManager.current.GameWin();
+        GameManager.current.isCompleted = true;
     }
 }

@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class AlivePlayer : MonoBehaviour
 {
-    public int countAlive;   //Count ALive
+    //public int countAlive;  //Count ALive
     private void Update()
     {
-        GetComponent<Text>().text = "Destory Blocks " + countAlive;
+       // GetComponent<Text>().text = "Destory Blocks " + countAlive;
 
-        if (countAlive == 0) //When CountAlive = 0. Active GameOverUI
-            GameManager.current.GameOver();
+        //When CountAlive = 0. Active GameOverUI
+       // if (countAlive == 0) 
+       //     GameManager.current.GameOver();
+            
     }
 }
